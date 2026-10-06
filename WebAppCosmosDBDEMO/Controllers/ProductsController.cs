@@ -2,7 +2,6 @@
 using Microsoft.Azure.Cosmos;
 using WebAppCosmosDBDEMO.DTO;
 using WebAppCosmosDBDEMO.Models;
-using WebAppCosmosDBDEMO.Repository;
 using WebAppCosmosDBDEMO.Services;
 
 namespace WebAppCosmosDBDEMO.Controllers
@@ -76,6 +75,7 @@ namespace WebAppCosmosDBDEMO.Controllers
             return Ok(products);
         }
 
+        //Postman http://localhost:5139/products/books/3b730d87-33a2-47bf-89e7-bbd7cdb3f1f4
         [HttpDelete("{category}/{id}")]
         public async Task<IActionResult> Delete(string category, string id)
         {
